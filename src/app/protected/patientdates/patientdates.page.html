@@ -12,5 +12,69 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-select placeholder="Select Filter" (ionChange)="getFilterTerm($event)">
+          <ion-select-option value="birthDate">Birthday</ion-select-option>
+          <ion-select-option value="call_Date">Day of Call</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>YYYY MM DD</ion-label>
+          <ion-datetime displayFormat="YYYY MM DD" (ionChange)="getFilterValue($event)"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="filterPatientData()">
+          <ion-icon name="search-outline" slot="start"></ion-icon>
+          Filter Patients
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <div *ngFor="let patient of filteredPatients">
+      <ion-row>
+        <ion-col>
+          <ion-card class="patient-card">
+            <ion-card-header>
+              <ion-card-title>
+                {{patient.firstName}} {{patient.lastName}}
+              </ion-card-title>
+              <ion-card-subtitle>
+                {{patient.email}}
+              </ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+              <ion-item>
+                <ion-icon name="home-outline" slot="start"></ion-icon>
+                {{patient.street}}, {{patient.city}}, {{patient.province}}, {{patient.country}}&nbsp;|&nbsp;{{patient.postal_Code}}
+              </ion-item>
+              <ion-item>
+                <ion-icon name="call-outline" slot="start"></ion-icon>
+                {{patient.phone}}
+              </ion-item>
+              <ion-item>
+                <ion-icon name="fitness-outline" slot="start"></ion-icon>
+                {{patient.birthDate}}
+              </ion-item>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>Health Notes</ion-card-title>
+                  <p>Logged: {{patient.call_Date}}</p>
+                </ion-card-header>
+
+                <ion-card-content>
+                  <p>{{patient.health_Notes}}</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
 
 </ion-content>
