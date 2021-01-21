@@ -3,6 +3,11 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { PatientService } from 'src/app/services/patient.service';
 
+/**
+ * -- File Description -- 
+ * 
+ * Facilitates the filtering of patients based on various attributes
+ */
 @Component({
   selector: 'app-patientattributes',
   templateUrl: './patientattributes.page.html',
@@ -10,7 +15,7 @@ import { PatientService } from 'src/app/services/patient.service';
 })
 export class PatientattributesPage implements OnInit {
   private patients: any = []              // all database patients
-  public filteredPatients: any = []      // a subset of filtered patients based on the original data
+  public filteredPatients: any = []       // a subset of filtered patients based on the original data
   private filterTerm: string              // the criteria to filter the results
   private filterValue: string             // the value to filter the reults
   public covidSelector: boolean = false;  // a flag indicating which search field to use

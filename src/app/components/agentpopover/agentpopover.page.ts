@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
+/**
+ * -- File Description -- 
+ * 
+ * Controls operations for displaying a popover for non-supervisor users
+ */
 @Component({
   selector: 'app-agentpopover',
   templateUrl: './agentpopover.page.html',

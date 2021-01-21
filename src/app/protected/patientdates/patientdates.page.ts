@@ -3,6 +3,11 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { PatientService } from 'src/app/services/patient.service';
 
+/**
+ * -- File Description -- 
+ * 
+ * Facilitates the filtering of patients based on date attributes
+ */
 @Component({
   selector: 'app-patientdates',
   templateUrl: './patientdates.page.html',
@@ -10,10 +15,10 @@ import { PatientService } from 'src/app/services/patient.service';
 })
 export class PatientdatesPage implements OnInit {
 
-  private patients: any = []              // all database patients
-  public filteredPatients: any = []      // a subset of filtered patients based on the original data
-  private filterTerm: string              // the criteria to filter the results
-  private filterValue: string             // the value to filter the reults
+  private patients: any = []        // all database patients
+  public filteredPatients: any = [] // a subset of filtered patients based on the original data
+  private filterTerm: string        // the criteria to filter the results
+  private filterValue: string       // the value to filter the reults
 
   constructor(
     private location: Location,
@@ -77,6 +82,9 @@ export class PatientdatesPage implements OnInit {
     return num < 10? '0'+ num : '' + num;
   }
 
+  /**
+   * Filters the list of patient data based on search criteria and value
+   */
   filterPatientData(): void {
     console.log(this.filterValue)
     if (this.filterTerm == null || this.filterValue == null) {
@@ -96,5 +104,4 @@ export class PatientdatesPage implements OnInit {
       })
     }
   }
-
 }

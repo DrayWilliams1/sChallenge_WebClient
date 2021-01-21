@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 
 const PATIENTS_URL = 'https://localhost:44322/api/Patients'
 
+/**
+ * -- File Description -- 
+ * 
+ * Allows for the retrieval patient data from the database
+ */
 @Injectable({
   providedIn: 'root'
 })

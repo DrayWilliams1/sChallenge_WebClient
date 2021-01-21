@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 
 const USER_URL = 'https://localhost:44322/api/Users'
 
+/**
+ * -- File Description -- 
+ * 
+ * Allows for the retrieval user data from the database
+ */
 @Injectable({
   providedIn: 'root'
 })

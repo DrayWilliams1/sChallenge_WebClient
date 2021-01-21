@@ -6,6 +6,11 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 import { PatientService } from 'src/app/services/patient.service';
 import { UserService } from 'src/app/services/user.service';
 
+/**
+ * -- File Description -- 
+ * 
+ * Provides controller operations for the supervisor dashboard
+ */
 @Component({
   selector: 'app-superdashboard',
   templateUrl: './superdashboard.page.html',
