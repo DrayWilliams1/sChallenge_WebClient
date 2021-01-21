@@ -1,7 +1,7 @@
 # sChallenge_WebClient
 An Angular + TypeScript demonstration.
 ## Summary
-A front-end SPA that provides a basic way to view and filter patients (callers) of the Telehealth system. This system is only available for supervisor's to view, as if agents try to access, they are greeted with a disablign popover that informs them of the usage and provides the option to log out.
+A front-end SPA that provides a basic way to view and filter patients (callers) of the Telehealth system. This system is only available for supervisor's to view, as if agents try to access, they are greeted with a dashboard disabling popover that informs them of the usage and provides the option to log out.
  
 Patients can be sorted by a few example categories, mainly being first name, postal code, and whether they have contracted Covid-19. Alternatively, patients can be sorted based on their birth date and the date the patient information was logged.
  
