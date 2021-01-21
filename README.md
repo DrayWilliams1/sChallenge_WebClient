@@ -13,7 +13,7 @@ First, download this repo to your computer.
 
 It is recommended to use Visual Studio Code (VSC) to run this application.
 
-To run this app, Node, NPM, and Ionic Framework are required. Node and NPM are packaged together and can be downloaded (here)[https://nodejs.org/en/download/]. To check Node and NPM have been installed successfully, run the commands `node -v` and `npm -v` to check the version of each.
+To run this app, Node, NPM, and Ionic Framework are required. Node and NPM are packaged together and can be downloaded [here](https://nodejs.org/en/download/). To check Node and NPM have been installed successfully, run the commands `node -v` and `npm -v` to check the version of each.
 
 Ionic Framework is a collection of UI components for cross-platofrm development that integrates with major front-end frameworks (like Angular). After installing node and npm, open a terminal and run `npm install @angular/cli` then `npm install -g @ionic/cli` to get the Ionic CLI. 
 
