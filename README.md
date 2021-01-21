@@ -5,9 +5,9 @@ A front-end SPA that provides a basic way to view and filter patients (callers) 
  
 Patients can be sorted by a few example categories, mainly being first name, postal code, and whether they have contracted Covid-19. Alternatively, patients can be sorted based on their birth date and the date the patient information was logged.
  
-**Note**: This app was completed as a side-project under a time-limit so some time-optimizing adjustments were made to provide basic system functionality.
+**Note:** This app was completed as a side-project under a time-limit so some time-optimizing adjustments were made to provide basic system functionality.
 ## How to Run
-**Note** The Web API should be running before any app interaction to facilitate back-end operations (see sChallenge_WebAPI for details).
+**Note:** The Web API should be running before any app interaction to facilitate back-end operations (see sChallenge_WebAPI for details).
 
 First, download this repo to your computer.
 
