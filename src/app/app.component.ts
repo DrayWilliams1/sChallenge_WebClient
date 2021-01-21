@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -28,7 +27,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
 
-    this.authService.authenticationState.subscribe((state) => {
+    this.authService.authenticationState.subscribe((state) => { // susbscribes to the user's authentication state
       console.log('Auth Changed: ', state)
       if (state) { // authenticated, go to the dashboard
         this.router.navigate(['superdashboard'])

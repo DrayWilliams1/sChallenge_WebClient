@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SuperdashboardPageRoutingModule } from './superdashboard-routing.module';
 
 import { SuperdashboardPage } from './superdashboard.page';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { SuperdashboardPage } from './superdashboard.page';
     IonicModule,
     SuperdashboardPageRoutingModule
   ],
-  declarations: [SuperdashboardPage]
+  declarations: [SuperdashboardPage, FooterComponent]
 })
 export class SuperdashboardPageModule {}

@@ -28,7 +28,7 @@ export class AuthenticationService {
     private toastCtrl: ToastController,
     private http: HttpClient
   ) {
-    this.plt.ready().then(() => {
+    this.plt.ready().then(() => { // when platform is ready, the token is checked (for authentication) 
       this.checkToken()
     })
   }
@@ -51,7 +51,7 @@ export class AuthenticationService {
     }).then((loading) => {
       loading.present();
 
-      this.http.post<any>(
+      this.http.post<any>( // makes POST request to web api
         POST_LOGIN_URL,
         JSON.stringify(loginJson),
         {
@@ -96,10 +96,12 @@ export class AuthenticationService {
   /**
    * Performs a local storage check for existence of ta login token.
    * In this case the token is being substituted for a user ID (for example's sake)
+   * 
+   * @returns a Promise after the token check has processed
    */
-  async checkToken() {
+  async checkToken(): Promise<void> {
     return this.storage.get(USER_ID).then(res => {
-      if(res) {
+      if(res) { // if a user Id exists, assume the user is authenticated (would typically use a session_id/jwt)
         this.authenticationState.next(true);
       }
     })
@@ -107,8 +109,10 @@ export class AuthenticationService {
 
   /**
    * Returns the User's TimeControl ID from local storage
+   * 
+   * @returns a Promise containing the user id
    */
-  getUserID(): Promise<any> {
+  getUserID(): Promise<number> {
     return this.storage.get(USER_ID)
   }
 

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="prevPage()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-text">
+      Patient: Attribute Filters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-select value="firstName">
+          <ion-select-option value="firstName">First Name</ion-select-option>
+          <ion-select-option value="postalCode">Postal Code</ion-select-option>
+          <ion-select-option value="postalCode">Has Covid</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col>
+        <ion-input class="search-input" placeholder="Enter Filter Value"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-button>
+          <ion-icon name="search-outline" slot="start"></ion-icon>
+          Filter Patients
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let patients of patients"></ion-row>
+  </ion-grid>
+
+</ion-content>

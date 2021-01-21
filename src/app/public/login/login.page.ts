@@ -80,5 +80,4 @@ export class LoginPage implements OnInit {
   login(): void {
     this.authService.login(this.username.value, this.password.value)
   }
-
 }

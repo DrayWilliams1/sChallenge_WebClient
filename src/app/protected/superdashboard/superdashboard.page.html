@@ -16,8 +16,62 @@
   <ion-grid>
     <ion-row>
       <ion-col>
+        <div style="padding-left: 20px; padding-top: 20px;">
+          <ion-text style="font-size: 22px; font-weight: 600;">Welcome {{user?.username}}</ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div style="padding-left: 20px; padding-top: 5px;">
+          <ion-text>Total Patients in the System: {{patientCount}}</ion-text>
+        </div>
+        
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card button="true" (click)="viewPatientDate()">
+          <ion-item lines="offset">
+            <ion-icon name="calendar-outline" slot="end"></ion-icon>
+            <ion-text style="font-weight: 600;">Filter Patients By Date</ion-text>
+          </ion-item>
+          <div style="min-height: 100px; background-color: #e4ab31;">
+            <ion-card-content>
+              <div style="color: #fff;">
+                <p class="filter-titles">• Date of Call</p>
+              </div>
+              
+            </ion-card-content>
+
+          </div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card style="--background: #2963a0;" button="true" (click)="viewPatientAttr()">
+          <ion-item lines="offset">
+            <ion-icon name="location-outline" slot="end"></ion-icon>
+            <ion-icon name="person-outline" slot="end"></ion-icon>
+            <ion-icon name="medkit-outline" slot="end"></ion-icon>
+            <ion-text style="font-weight: 600;">Filter Patients By Attribute</ion-text>
+          </ion-item>
+          <div style="min-height: 100px; background-color: #2963a0;">
+            <ion-card-content>
+              <div style="color: #fff;">
+                <p class="filter-titles">• First Name</p>
+                <p class="filter-titles">• Postal Code</p>
+                <p class="filter-titles">• Has Covid</p>
+              </div>
+            </ion-card-content>
+          </div>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 
 </ion-content>
+
+<app-footer></app-footer>
