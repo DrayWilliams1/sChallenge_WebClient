@@ -1,0 +1,29 @@
+@import '../../../global.scss';
+
+.logo {
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+// Displays if/when form input does not pass validation
+.error-message {
+    color: var(--ion-color-danger);
+}
+
+.error-message-card {
+   --background: rgba(248, 224, 86, 0.705);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 5px
+}
+
+.login-card {
+    --background: var(--ion-color-light);
+}
+
+.login-card-list {
+    background-color: transparent;
+}

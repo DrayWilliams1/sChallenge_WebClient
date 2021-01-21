@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.footer-text {
+    font-size: small;
+    font-weight: 200;
+    text-align: center;
+}
+
+.header-text {
+    color: white;
+    font-size: medium;
+    font-weight: 300;
+    text-align: right;
+}
+  
